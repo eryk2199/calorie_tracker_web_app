@@ -1,11 +1,13 @@
+import { Link } from "react-router";
+
 export default function DayCard({date, meals}) {
     const title = date.toLocaleDateString("pl",{weekday: "long", month: "long", day: "numeric"});
     if(meals == undefined || meals.length === 0) {
         return (
             <div className="card">
                 <h3>{title}</h3>
-                <div>
-                    <button>Dodaj posiłek</button>
+                <div className="card__content--empty">
+                    <Link to="/meals/add">Utwórz plan</Link>
                 </div>
             </div>
         );

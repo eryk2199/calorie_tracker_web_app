@@ -4,9 +4,7 @@ import DayCard from './DayCard';
 function App() {
   const [displayedDate, setDisplayedDate] = useState(new Date())
 
-  const handleDateUpdate = (days) => {
-    setDisplayedDate(d =>  new Date(d.getFullYear(), d.getMonth(), d.getDate() + days));
-  }
+  
 
 
   return (
@@ -116,11 +114,7 @@ function App() {
         </table>
       </div>
       <br/>
-      <div>
-        <button onClick={() => handleDateUpdate(-1)}>{"<"}</button>
-        <DayCard date={displayedDate}/>
-        <button onClick={() => handleDateUpdate(1)}>{">"}</button>
-      </div>
+      
     </>
   )
 }
